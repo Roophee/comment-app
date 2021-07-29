@@ -31,7 +31,7 @@ const CommentForm = props => {
       const requestOptions = {
         method: 'POST',
         mode:'cors',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json','Access-Control-Allow-Origin':'*' },
         body: JSON.stringify({ name: formName, text: formText }),
       };
       fetch('https://jordan.ashton.fashion/api/goods/30/comments', requestOptions).then(
