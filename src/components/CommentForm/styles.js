@@ -19,6 +19,7 @@ const StyledCommentForm = styled.div`
     font-size: 16px;
     line-height: 1.2;
     border-radius: 5px;
+    padding: 5px 0;
   }
 
   & label {
@@ -36,6 +37,7 @@ const StyledCommentForm = styled.div`
     max-width: 100%;
     min-width: 100%;
     min-height: 150px;
+    padding: 5px 0;
     font-size: 16px;
     line-height: 1.2;
     border-radius: 5px;

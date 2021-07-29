@@ -43,7 +43,6 @@ const CommentForm = props => {
       if (validateForm(formName, formText)){
       const requestOptions = {
         method: 'POST',
-        // mode:'no-cors',
         headers: { 'Content-Type': 'application/json','Access-Control-Allow-Origin':'*', 'Vary': 'Origin' },
         body: JSON.stringify({ name: formName, text: formText }),
       };
