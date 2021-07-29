@@ -6,7 +6,7 @@ const MoreCommentsBtn = props => {
   const onClickHandler = useCallback(() => {
     setMoreButtonClicked(true);
     setUrlRequest(next);
-  }, [next]);
+  }, [next, setMoreButtonClicked, setUrlRequest]);
 
   return (
     <StyledMoreCommentsBtn onClick={onClickHandler} disabled={!next}>

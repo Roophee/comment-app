@@ -22,20 +22,22 @@ const Pagination = props => {
       <PaginationButton
         url={first_page_url}
         disabled={current_page === 1}
+        urlSetter={urlSetter}
         handlerCreator={onClickHandlerCreator}>
         First
       </PaginationButton>
-      <PaginationButton url={prev_page_url} handlerCreator={onClickHandlerCreator}>
+      <PaginationButton url={prev_page_url} urlSetter={urlSetter} handlerCreator={onClickHandlerCreator}>
         Prev
       </PaginationButton>
-      <PaginationButton disabled url={null} handlerCreator={onClickHandlerCreator}>
+      <PaginationButton disabled url={null} urlSetter={urlSetter} handlerCreator={onClickHandlerCreator}>
         {current_page} from {last_page}
       </PaginationButton>
-      <PaginationButton url={next_page_url} handlerCreator={onClickHandlerCreator}>
+      <PaginationButton url={next_page_url} urlSetter={urlSetter} handlerCreator={onClickHandlerCreator}>
         Next
       </PaginationButton>
       <PaginationButton
         url={last_page_url}
+        urlSetter={urlSetter}
         handlerCreator={onClickHandlerCreator}
         disabled={current_page === last_page}>
         Last

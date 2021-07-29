@@ -27,7 +27,7 @@ const CommentsList = () => {
           })
         );
     }
-  }, [urlRequest]);
+  }, [urlRequest, moreButtonClicked]);
 
   return (
     <>

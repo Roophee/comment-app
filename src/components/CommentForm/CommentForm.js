@@ -27,10 +27,12 @@ const CommentForm = props => {
 
   const validateForm = (name, text) => {
     if (!name || name.length < 2){
+      // eslint-disable-next-line no-alert
       alert('Имя долно быть более двух символов');
       return false;
     }
     if (!text || text.length < 2) {
+      // eslint-disable-next-line no-alert
       alert('Текст комментария должен быть более двух символов');
       return false;
     }
@@ -47,19 +49,20 @@ const CommentForm = props => {
         body: JSON.stringify({ name: formName, text: formText }),
       };
       fetch('https://jordan.ashton.fashion/api/goods/30/comments', requestOptions).then(
-        response => {
+        () => {
           clearForm();
           setUrlRequest(lastPage);
         }
       );}
     },
-    [lastPage, formName, formText]
+    [lastPage, formName, formText, setUrlRequest]
   );
 
   return (
     <StyledCommentForm>
       <form>
         <div>
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="name">Name:</label>
           <input
             value={formName}
@@ -74,6 +77,7 @@ const CommentForm = props => {
           />
         </div>
         <div>
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="text">Comment:</label>
           <textarea
             value={formText}
