@@ -13,7 +13,7 @@ const CommentForm = props => {
     if (event.target.id === 'text') {
       setFormText(event.target.value);
     }
-  }, []);
+  }, [setFormName, setFormText]);
 
   const clearForm = () => {
     setFormName('');
@@ -25,9 +25,22 @@ const CommentForm = props => {
     clearForm();
   }, []);
 
+  const validateForm = (name, text) => {
+    if (!name || name.length < 2){
+      alert('Имя долно быть более двух символов');
+      return false;
+    }
+    if (!text || text.length < 2) {
+      alert('Текст комментария должен быть более двух символов');
+      return false;
+    }
+    return true
+  }
+
   const onSubmitClickHandler = useCallback(
     event => {
       event.preventDefault();
+      if (validateForm(formName, formText)){
       const requestOptions = {
         method: 'POST',
         // mode:'no-cors',
@@ -39,9 +52,9 @@ const CommentForm = props => {
           clearForm();
           setUrlRequest(lastPage);
         }
-      );
+      );}
     },
-    [lastPage]
+    [lastPage, formName, formText]
   );
 
   return (
