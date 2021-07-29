@@ -3,7 +3,7 @@ import StyledUserAvatar from './styles';
 
 const UserAvatar = props => {
     const {name} = props;
-  const getLiteralName = new RegExp('^[A-Za-z]');
+  const getLiteralName = new RegExp('^[A-Za-zА-Яа-яЁё0-9]');
   return (
     <StyledUserAvatar>
       <span>{getLiteralName.test(name) ? name[0].toUpperCase() : 'U'}</span>
