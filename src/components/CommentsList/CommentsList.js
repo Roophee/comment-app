@@ -34,10 +34,9 @@ const CommentsList = () => {
       <div className="comments__panel">
         {serverResponse &&
           serverResponse.data.map(item => <CommentItem key={item.id} item={item} />)}
+          {serverResponse && serverResponse.current_page === serverResponse.last_page && (
+              <CommentForm setUrlRequest={setUrlRequest} lastPage={serverResponse.last_page_url} /> )}
       </div>
-      {serverResponse && serverResponse.current_page === serverResponse.last_page && (
-        <CommentForm setUrlRequest={setUrlRequest} lastPage={serverResponse.last_page_url} />
-      )}
       <div className="buttons__panel">
         {serverResponse && (
           <MoreCommentsBtn
