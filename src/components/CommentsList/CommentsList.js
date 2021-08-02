@@ -13,7 +13,16 @@ const CommentsList = () => {
   useEffect(() => {
     if (urlRequest) {
       fetch(urlRequest)
-        .then(resp => resp.json())
+        .then((res) => {
+            if (res.status !== 200) {
+                throw new Error('Network response was not OK');
+            }else{
+                return res.json();
+            };
+        })
+          .catch((error) => {
+              console.error('There has been a problem with your fetch operation:' , error)
+          })
         .then(resp =>
           setServerResponse(prevState => {
             if (moreButtonClicked) {
