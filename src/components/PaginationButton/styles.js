@@ -6,17 +6,16 @@ const StyledPaginationButton = styled.button`
   height: 40px;
   margin: 0 5px;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 2px #424242;
-  background: #bbdefb;
-  color: #01579b;
+  ${({theme}) => theme.boxShadow};
+  background: ${({theme}) => theme.buttonBackgroundActive};
+  color: ${({theme}) => theme.buttonsColor};
   font-weight: 600;
 
   &:hover:not([disabled]) {
-    background: #81d4fa;
+    background: ${({theme}) => theme.buttonBackgroundHover};
   }
   &:disabled {
-    background: #e0e0e0;
-    color: #0277bd;
+    background: ${({theme}) => theme.buttonBackgroundDisabled};
   }
 `;
 

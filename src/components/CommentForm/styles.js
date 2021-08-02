@@ -4,10 +4,10 @@ const StyledCommentForm = styled.div`
   width: 90%;
   margin: 5px auto;
   padding: 3px 10px;
-  background: #eee;
+  background: ${({theme}) => theme.itemBackground};
   word-wrap: break-word;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 2px #424242;
+  ${({theme}) => theme.boxShadow};
 
   & form {
     display: flex;
@@ -16,6 +16,7 @@ const StyledCommentForm = styled.div`
 
   & input {
     width: 100%;
+    background: ${({theme}) => theme.inputBackground};
     font-size: 16px;
     line-height: 1.2;
     border-radius: 5px;
@@ -38,6 +39,7 @@ const StyledCommentForm = styled.div`
     min-width: 100%;
     min-height: 150px;
     padding: 5px 0;
+    background: ${({theme}) => theme.inputBackground};
     font-size: 16px;
     line-height: 1.2;
     border-radius: 5px;
@@ -51,14 +53,15 @@ const StyledCommentForm = styled.div`
   }
 
   & .form__button.send {
-    background: #388e3c;
+    background: ${({theme}) => theme.sendBackground};
     font-weight: 600;
+    ${({theme}) => theme.boxShadow};
   }
 
   & .form__button.clear {
-    background: #d32f2f;
+    background: ${({theme}) => theme.clearBackground};
     font-weight: 600;
-  }
+    ${({theme}) => theme.boxShadow};
 `;
 
 export default StyledCommentForm;

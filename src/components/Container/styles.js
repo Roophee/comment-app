@@ -8,10 +8,10 @@ const StyledContainer = styled.div`
   min-height: 95vh;
   margin: auto;
   padding: 10px 0;
-  background: #1565c0;
-  border: 3px solid #0d47a1;
+  background: ${({theme}) => theme.mainBackground};
+  border: ${({theme}) => theme.mainBorder};
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 2px #424242;
+  ${({theme}) => theme.boxShadow};
 
   & .comments__panel {
     display: flex;

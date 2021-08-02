@@ -4,10 +4,10 @@ const StyledCommentItem = styled.div`
   width: 90%;
   margin: 5px auto;
   padding: 3px 10px;
-  background: #eee;
+  background: ${({theme}) => theme.itemBackground};
   word-wrap: break-word;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 2px #424242;
+  ${({theme}) => theme.boxShadow};
 
   & .user__header {
     display: flex;

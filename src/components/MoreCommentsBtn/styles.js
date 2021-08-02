@@ -6,17 +6,17 @@ const StyledMoreCommentsBtn = styled.button`
   font-size: 18px;
   align-self: center;
   margin: 10px;
-  background: #bbdefb;
-  color: #01579b;
+  background: ${({theme}) => theme.buttonBackgroundActive};
   font-weight: 600;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 2px #424242;
+  ${({theme}) => theme.boxShadow};
+  color: ${({theme}) => theme.buttonsColor};
 
   &:hover:not([disabled]) {
-    background: #81d4fa;
+    background: ${({theme}) => theme.buttonBackgroundHover};
   }
   &:disabled {
-    background: #e0e0e0;
+    background: ${({theme}) => theme.buttonBackgroundDisabled};
     color: #0277bd;
   }
 `;

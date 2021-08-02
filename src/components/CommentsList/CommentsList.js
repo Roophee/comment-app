@@ -21,6 +21,7 @@ const CommentsList = () => {
             };
         })
           .catch((error) => {
+              // eslint-disable-next-line no-console
               console.error('There has been a problem with your fetch operation:' , error)
           })
         .then(resp =>

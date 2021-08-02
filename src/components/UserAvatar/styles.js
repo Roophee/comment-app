@@ -6,9 +6,9 @@ const StyledUserAvatar = styled.div`
   min-height: 35px;
   margin-right: 5px;
   border-radius: 50%;
-  border: 3px solid #0d47a1;
-  background: #2196f3;
-  color: #eee;
+  border: ${({theme}) => theme.mainBorder};
+  background:${({theme}) => theme.avatarBackground};
+  color: ${({theme}) => theme.avatarColor};
   font-size: 26px;
   font-weight: 400;
 
