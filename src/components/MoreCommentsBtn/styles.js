@@ -17,7 +17,6 @@ const StyledMoreCommentsBtn = styled.button`
   }
   &:disabled {
     background: ${({theme}) => theme.buttonBackgroundDisabled};
-    color: #0277bd;
   }
 `;
 export default StyledMoreCommentsBtn;
