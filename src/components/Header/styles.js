@@ -12,5 +12,10 @@ const StyledHeader = styled.header`
   color: #fff;
   font-weight: 700;
   font-size: 42px;
+  
+  @media(max-width: 500px) {
+
+    font-size: 28px;
+  }
 `;
 export default StyledHeader;
