@@ -6,7 +6,7 @@ const ThemeSwitcher = props => {
   return (
     <StyledThemeSwitcher>
       <label htmlFor="toggle">
-        <input onChange={themeToggleHandler} className="input" id="toggle" type="checkbox"/>
+        <input tabIndex="0" onChange={themeToggleHandler} className="input" id="toggle" type="checkbox"/>
         <div className="toggle-wrapper"><span className="selector"/></div>
       </label>
     </StyledThemeSwitcher>

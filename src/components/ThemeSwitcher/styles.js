@@ -6,7 +6,7 @@ const StyledThemeSwitcher = styled.div`
     pointer-events: none;
   }
   label .input {
-    display: none;
+    opacity: 0;
   }
   label .input:checked + .toggle-wrapper > .selector {
     left: 50%;
